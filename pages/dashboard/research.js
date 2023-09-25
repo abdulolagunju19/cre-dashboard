@@ -5,8 +5,11 @@ import {
     Link,
     Checkbox,
     Text,
-    OrderedList
+    OrderedList,
+    ListIcon
 } from '@chakra-ui/react';
+
+import { IoBusinessOutline } from "react-icons/io5";
 
 import DashboardContainer from '@/components/DashboardContainer';
 
@@ -19,55 +22,66 @@ const DashboardResearch = () => {
                     overflow="auto"
                 >
                     <Heading>Key Competitors</Heading>
-                    <OrderedList py={6} spacing={3}>
+                    <List py={6} spacing={3}>
                         <ListItem>
+                            <ListIcon as={IoBusinessOutline} />
                             <Link href="https://www.altusgroup.com/" isExternal>Altus Group</Link>
                         </ListItem>
                         <ListItem>
+                            <ListIcon as={IoBusinessOutline} />
                             <Link href="https://www.cbre.ca/" isExternal>CBRE- Coldwell Banker Richard Ellis</Link>
                         </ListItem>
                         <ListItem>
+                            <ListIcon as={IoBusinessOutline} />
                             <Link href="https://www.jll.ca/" isExternal>JLL- Jones Lang LaSalle</Link>
                         </ListItem>
                         <ListItem>
+                            <ListIcon as={IoBusinessOutline} />
                             <Link href="https://www.avisonyoung.ca/web/calgary" isExternal>Avison Young</Link>
                         </ListItem>
                         <ListItem>
+                            <ListIcon as={IoBusinessOutline} />
                             <Link href="https://aicrecommercial.com/calgary-market-research/" isExternal>AICRE Commercial</Link>
                         </ListItem>
                         <ListItem>
+                            <ListIcon as={IoBusinessOutline} />
                             <Link href="https://www.liangcommercial.ca/en/" isExternal>Liang Commercial</Link>
                         </ListItem>
                         <ListItem>
+                            <ListIcon as={IoBusinessOutline} />
                             <Link href="https://cmsrealestateltd.com/" isExternal>CMS Real Estate</Link>
                         </ListItem>
                         <ListItem>
+                            <ListIcon as={IoBusinessOutline} />
                             <Link href="https://lizotterealestate.com/" isExternal>Lizotte Real Estate</Link>
                         </ListItem>
                         <ListItem>
+                            <ListIcon as={IoBusinessOutline} />
                             <Link href="https://calgarycommercialgroup.com/" isExternal>Calgary Commercial Group</Link>
                         </ListItem>
                         <ListItem>
+                            <ListIcon as={IoBusinessOutline} />
                             <Link href="http://www.smicommercial.com/" isExternal>Calgary SMI Commercial Real Estate</Link>
                         </ListItem>
                         <ListItem>
+                            <ListIcon as={IoBusinessOutline} />
                             <Link href="https://barclaystreet.com/" isExternal>Barclay Street Real Estate</Link>
                         </ListItem>
                         <ListItem>
+                            <ListIcon as={IoBusinessOutline} />
                             <Link href="http://www.fairfieldcommercial.com/" isExternal>Fairfield Commercial</Link>
                         </ListItem>
                         <ListItem>
+                            <ListIcon as={IoBusinessOutline} />
                             <Link href="https://www.naiadvent.com/research-and-market-analysis/" isExternal>NAI Advent</Link>
                         </ListItem>
                         <ListItem>
+                            <ListIcon as={IoBusinessOutline} />
                             <Link href="https://www.calgaryofficespace.ca/" isExternal>
                                 CORE Commercial Real Estate Ltd.
                             </Link>
                         </ListItem>
-                        <ListItem>
-                            <Text>Barry Commercial Real Estate</Text>
-                        </ListItem>
-                    </OrderedList>
+                    </List>
                     <Heading>Terminology</Heading>
                     <List py={6} spacing={3}>
                     <ListItem>
