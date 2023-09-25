@@ -1,3 +1,5 @@
+import { useRouter } from 'next/navigation';
+
 import {
     Box,
     Flex,
@@ -14,12 +16,11 @@ import {
     Stack,
   } from '@chakra-ui/react';
   import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-  import { signOut } from 'next-auth/react';
 
   import NextLink from 'next/link';
   
-  const hrefpaths = ['/dashboard', '/dashboard/calendar', '/dashboard/documents', '/dashboard/analytics', '/dashboard/projects', '/dashboard/reports', '/dashboard/team'];
-  const Links = ['Dashboard', 'Calendar', 'Documents', 'Analytics', 'Projects', 'Reports', 'Team']
+  const hrefpaths = ['/dashboard', '/dashboard/research', '/dashboard/data', '/dashboard/documents', '/dashboard/team'];
+  const Links = ['Dashboard', 'Research', 'Data', 'Documents', 'Team']
                   
   const NavLink = ({ children, hrefpath }) => (
     <NextLink href={hrefpath} passHref
@@ -38,6 +39,8 @@ import {
   export default function DashboardNav() {
     //for user profile on navigation to sign out
     const { isOpen, onOpen, onClose } = useDisclosure();
+
+    const router = useRouter();
   
     //different navigation bar compared to home page, use .map to display buttons in header
     //when sign out clicked, callback to take user back to home page
@@ -82,7 +85,7 @@ import {
                 </MenuButton>
                 <MenuList>
                   <MenuItem onClick={() => {
-                    signOut({ callbackUrl: "/" })
+                    router.push("/")
                   }}>
                     Sign Out
                   </MenuItem>

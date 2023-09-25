@@ -13,10 +13,10 @@ export default function Home() {
             size="xl"
             fontWeight="bold"
           >
-            Proserus Dashboard
+            Real Estate Dashboard
           </Heading>
           <Image
-            src="/indexpic.png"
+            src="/Realtor-bro.png"
             alt="Photo"
             width={280}
             height={280}

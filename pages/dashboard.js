@@ -1,8 +1,5 @@
 import { Flex, Heading } from '@chakra-ui/react';
 
-import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/router';
-
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.css';
@@ -13,20 +10,11 @@ import DashboardContainer from '@/components/DashboardContainer';
 
 const DashboardIndex = () => {
 
-    const router = useRouter();
-
-    const { data: session } = useSession({
-        required: true,
-        onUnauthenticated() {
-          router.push('/')
-        }
-    });
-
     const chartData = {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
             type: 'line',
-            label: 'Net Sales',
+            label: 'Net Absorption',
             borderColor: '#42A5F5',
             borderWidth: 2,
             fill: false,
@@ -42,7 +30,7 @@ const DashboardIndex = () => {
             ]
         }, {
             type: 'bar',
-            label: 'Gross Margin',
+            label: 'New Supply',
             backgroundColor: '#66BB6A',
             data: [
                 21,
@@ -57,7 +45,7 @@ const DashboardIndex = () => {
             borderWidth: 2
         }, {
             type: 'bar',
-            label: 'EBITDA',
+            label: 'Vacancy Rate',
             backgroundColor: '#FFA726',
             data: [
                 41,
@@ -103,19 +91,17 @@ const DashboardIndex = () => {
 
     return(
         <>
-            {session && 
-                <DashboardContainer>
-                    <Flex
-                        flexDir="column"
-                        overflow="auto"
-                        maxH="80vh"
-                        maxW="250vh"
-                    >
-                        <Heading>Financial Overview</Heading>
-                        <Chart type="bar" data={chartData} options={lightOptions} height="100vh" width="100%"/>
-                    </Flex>
-                </DashboardContainer>
-            }
+            <DashboardContainer>
+                <Flex
+                    flexDir="column"
+                    overflow="auto"
+                    maxH="80vh"
+                    maxW="250vh"
+                >
+                    <Heading>Market Overview</Heading>
+                    <Chart type="bar" data={chartData} options={lightOptions} height="100vh" width="100%"/>
+                </Flex>
+            </DashboardContainer>
         </>
     )
 }

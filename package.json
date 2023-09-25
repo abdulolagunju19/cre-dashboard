@@ -6,22 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "test": "jest --coverage"
+    "lint": "next lint"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
     "@chakra-ui/react": "^2.6.1",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
-    "@vercel/analytics": "^1.0.2",
     "chart.js": "^4.3.0",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
     "framer-motion": "^10.12.12",
-    "mongodb": "^5.5.0",
     "next": "13.4.2",
-    "next-auth": "^4.22.3",
     "primeflex": "^3.3.0",
     "primeicons": "^6.0.1",
     "primereact": "^9.4.0",
@@ -29,8 +25,7 @@
     "react-calendar": "^4.2.1",
     "react-dom": "18.2.0",
     "react-pdfobject": "^1.2.0",
-    "styled-components": "^6.0.0-rc.1",
-    "swr": "^2.2.1"
+    "styled-components": "^6.0.0-rc.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.17.0",

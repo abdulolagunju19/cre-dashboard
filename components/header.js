@@ -1,6 +1,5 @@
 import NextLink from 'next/link';
 import { useColorModeValue, Button, Flex } from '@chakra-ui/react';
-import { signIn } from 'next-auth/react'
 
 import ThemeToggle from './theme-toggle';
 
@@ -8,7 +7,6 @@ export default function Header() {
   const bgColor = useColorModeValue('white', 'gray.900');
 
   //header is on home page with login button
-  //google authentication for user sign in with next-auth
   return (
     <Flex
       pos="fixed"
@@ -31,16 +29,15 @@ export default function Header() {
                     Home
                   </Button>
                 </NextLink>
-                <Button 
-                  variant="ghost" 
-                  p={2} 
-                  fontWeight="bold" 
-                  onClick={() => {
-                    signIn('google', { callbackUrl: "/dashboard"})
-                  }}
-                >
-                  Sign In
-                </Button>
+                <NextLink href="/dashboard" passHref>
+                  <Button 
+                    variant="ghost" 
+                    p={2} 
+                    fontWeight="bold" 
+                  >
+                    Dashboard
+                  </Button>
+                </NextLink>
             </Flex>
             <Flex>
               <ThemeToggle />
